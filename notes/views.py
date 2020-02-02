@@ -10,3 +10,7 @@ class NoteList(generics.ListAPIView):
 class NoteDetail(generics.RetrieveUpdateDestroyAPIView):
   queryset = models.Note.objects.all()
   serializer_class = serializers.NoteSerializer
+
+class NoteCreat(generics.ListCreateAPIView):
+  queryset = models.Note.objects.all()
+  serializer_class = serializers.NoteSerializer
